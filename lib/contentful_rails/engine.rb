@@ -60,9 +60,10 @@ module ContentfulRails
     end
 
     initializer "add_preview_support" do
-      ActiveSupport.on_load(:action_controller) do
-        include ContentfulRails::Preview
-      end
+      puts "Preview support disabled because 5.1beta error"
+      # ActiveSupport.on_load(:action_controller) do
+      #   include ContentfulRails::Preview
+      # end
     end
 
     config.to_prepare do
