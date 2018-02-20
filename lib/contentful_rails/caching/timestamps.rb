@@ -15,6 +15,8 @@ module ContentfulRails
           cache_key = timestamp_cache_key(item_id)
 
           Rails.cache.delete(cache_key)
+          Rails.cache.delete(['views',cache_key].join('/'))
+
         end
 
         def timestamp_cache_key(item_id)
